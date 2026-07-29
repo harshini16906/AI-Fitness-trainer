@@ -1,4 +1,11 @@
-// Vite configuration placeholder for the frontend application.
-export default {
-  // Add Vite config here in future steps.
-};
+// Vite configuration with the React plugin for the frontend foundation.
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+  },
+});
