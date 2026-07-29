@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+__pycache__/
+.venv/
+venv/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+*.pyc
+
+# Editor settings
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+pip-log.txt
