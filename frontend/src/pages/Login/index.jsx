@@ -135,9 +135,9 @@ export default function Login() {
                   <input type="checkbox" checked={rememberMe} onChange={() => setRememberMe((prev) => !prev)} className="rounded border-white/10 bg-white/5 text-cyan-400 focus:ring-cyan-400" />
                   <span>Remember me</span>
                 </label>
-                <a href="#" className="text-cyan-300 transition hover:text-cyan-200">
+                <Link to="/forgot-password" className="text-cyan-300 transition hover:text-cyan-200">
                   Forgot password?
-                </a>
+                </Link>
               </div>
 
               <motion.button
