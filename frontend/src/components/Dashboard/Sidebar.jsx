@@ -9,7 +9,7 @@ const menuItems = [
   { label: 'Progress', icon: FiBarChart2, href: '/progress' },
   { label: 'Achievements', icon: FiAward, href: '/dashboard' },
   { label: 'Reports', icon: FiClock, href: '/dashboard' },
-  { label: 'Settings', icon: FiSettings, href: '/profile' },
+  { label: 'Settings', icon: FiSettings, href: '/settings' },
 ];
 
 export default function Sidebar({ activeItem = 'Dashboard', collapsed = false, onToggle }) {

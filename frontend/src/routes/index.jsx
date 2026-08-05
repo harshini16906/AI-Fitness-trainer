@@ -11,6 +11,7 @@ import Workout from '../pages/Workout';
 import Progress from '../pages/Progress';
 import Nutrition from '../pages/Nutrition';
 import Profile from '../pages/Profile';
+import Settings from '../pages/Settings';
 import NotFound from '../pages/NotFound';
 
 export default function AppRoutes() {
@@ -27,6 +28,7 @@ export default function AppRoutes() {
         <Route path="/progress" element={<Progress />} />
         <Route path="/nutrition" element={<Nutrition />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/settings" element={<Settings />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
