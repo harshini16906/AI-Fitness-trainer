@@ -1,7 +1,7 @@
 // Premium AI fitness dashboard with modular cards, charts, and animated insights.
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiAward, FiClock, FiFire, FiHeart, FiPlay, FiTrendingUp } from 'react-icons/fi';
+import { FiActivity, FiAward, FiClock, FiHeart, FiPlay, FiTrendingUp } from 'react-icons/fi';
 import Sidebar from '../../components/Dashboard/Sidebar';
 import TopNavbar from '../../components/Dashboard/TopNavbar';
 import StatsCard from '../../components/Dashboard/StatsCard';
@@ -48,7 +48,7 @@ export default function Dashboard() {
           </motion.div>
 
           <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            <StatsCard icon={FiFire} title="Calories Burned" value="1,245 kcal" subtitle="Today’s energy output" accent="bg-gradient-to-br from-orange-500 to-amber-400" />
+            <StatsCard icon={FiActivity} title="Calories Burned" value="1,245 kcal" subtitle="Today’s energy output" accent="bg-gradient-to-br from-orange-500 to-amber-400" />
             <StatsCard icon={FiAward} title="Workouts Completed" value="28" subtitle="Across the last 30 days" accent="bg-gradient-to-br from-cyan-500 to-blue-500" />
             <StatsCard icon={FiClock} title="Workout Time" value="16 hrs" subtitle="Focused training time" accent="bg-gradient-to-br from-violet-500 to-fuchsia-500" />
             <StatsCard icon={FiTrendingUp} title="Current Streak" value="12 Days" subtitle="Consistency is thriving" accent="bg-gradient-to-br from-emerald-500 to-lime-500" />

@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import { FiActivity, FiAward, FiBarChart2, FiClock, FiHome, FiLogOut, FiMoon, FiSettings, FiSparkles, FiTarget, FiUtensils, FiZap } from 'react-icons/fi';
+import { FiActivity, FiAward, FiBarChart2, FiClock, FiHome, FiLogOut, FiMoon, FiSettings, FiStar, FiTarget, FiHeart, FiZap } from 'react-icons/fi';
 
 const menuItems = [
   { label: 'Dashboard', icon: FiHome, href: '/dashboard' },
   { label: 'Workouts', icon: FiTarget, href: '/workout' },
-  { label: 'AI Coach', icon: FiSparkles, href: '/dashboard' },
-  { label: 'Nutrition', icon: FiUtensils, href: '/nutrition' },
+  { label: 'AI Coach', icon: FiStar, href: '/dashboard' },
+  { label: 'Nutrition', icon: FiHeart, href: '/nutrition' },
   { label: 'Progress', icon: FiBarChart2, href: '/progress' },
   { label: 'Achievements', icon: FiAward, href: '/dashboard' },
   { label: 'Reports', icon: FiClock, href: '/dashboard' },

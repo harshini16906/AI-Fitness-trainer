@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiMessageSquare, FiBolt, FiApple } from 'react-icons/fi';
+import { FiMessageSquare, FiCpu, FiZap } from 'react-icons/fi';
 
 export default function AICoachCard() {
   return (
