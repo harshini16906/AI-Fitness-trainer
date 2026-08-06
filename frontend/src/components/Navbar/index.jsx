@@ -35,9 +35,15 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
-            <a key={link.path} href={link.path} className="relative text-sm text-slate-300 transition hover:text-cyan-300 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-cyan-300 after:transition-transform after:duration-300 hover:after:scale-x-100">
-              {link.name}
-            </a>
+            link.path.startsWith('#') ? (
+              <a key={link.path} href={link.path} className="relative text-sm text-slate-300 transition hover:text-cyan-300 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-cyan-300 after:transition-transform after:duration-300 hover:after:scale-x-100">
+                {link.name}
+              </a>
+            ) : (
+              <Link key={link.path} to={link.path} className="relative text-sm text-slate-300 transition hover:text-cyan-300 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-cyan-300 after:transition-transform after:duration-300 hover:after:scale-x-100">
+                {link.name}
+              </Link>
+            )
           ))}
         </div>
 

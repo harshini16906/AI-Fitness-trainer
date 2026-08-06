@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiRobot, FiArrowRight, FiHeart, FiShield } from 'react-icons/fi';
+import { FiCpu, FiArrowRight, FiHeart, FiShield } from 'react-icons/fi';
 
 export default function AIFitnessInsights() {
   return (

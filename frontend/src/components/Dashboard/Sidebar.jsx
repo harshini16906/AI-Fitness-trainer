@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiActivity, FiAward, FiBarChart2, FiClock, FiHome, FiLogOut, FiMoon, FiSettings, FiStar, FiTarget, FiHeart, FiZap } from 'react-icons/fi';
 
@@ -37,15 +38,15 @@ export default function Sidebar({ activeItem = 'Dashboard', collapsed = false, o
             const Icon = item.icon;
             const isActive = activeItem === item.label;
             return (
-              <motion.a
-                key={item.label}
-                whileHover={{ x: 2, scale: 1.01 }}
-                href={item.href}
+              <motion.div key={item.label} whileHover={{ x: 2, scale: 1.01 }}>
+              <Link
+                to={item.href}
                 className={`flex items-center gap-3 rounded-2xl px-3 py-3 text-sm transition ${isActive ? 'bg-gradient-to-r from-cyan-500/20 to-emerald-500/10 text-white shadow-[0_0_20px_rgba(59,130,246,0.16)]' : 'text-slate-400 hover:bg-white/5 hover:text-slate-200'}`}
               >
                 <Icon className={`text-lg ${isActive ? 'text-cyan-300' : 'text-slate-400'}`} />
                 {!collapsed ? <span>{item.label}</span> : null}
-              </motion.a>
+              </Link>
+            </motion.div>
             );
           })}
         </nav>

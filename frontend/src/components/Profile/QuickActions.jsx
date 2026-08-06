@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiPlay, FiBarChart2, FiHeart, FiSettings, FiDownload, FiShare2 } from 'react-icons/fi';
 
 const actions = [
-  { label: 'Start Workout', icon: FiPlay, variant: 'from-cyan-500 to-violet-500' },
-  { label: 'View Progress', icon: FiBarChart2, variant: 'from-emerald-500 to-cyan-500' },
-  { label: 'Nutrition Dashboard', icon: FiHeart, variant: 'from-violet-500 to-fuchsia-500' },
-  { label: 'Settings', icon: FiSettings, variant: 'from-blue-500 to-cyan-500' },
-  { label: 'Download Report', icon: FiDownload, variant: 'from-emerald-500 to-teal-500' },
-  { label: 'Share Profile', icon: FiShare2, variant: 'from-cyan-500 to-blue-500' },
+  { label: 'Start Workout', icon: FiPlay, variant: 'from-cyan-500 to-violet-500', to: '/workout' },
+  { label: 'View Progress', icon: FiBarChart2, variant: 'from-emerald-500 to-cyan-500', to: '/progress' },
+  { label: 'Nutrition Dashboard', icon: FiHeart, variant: 'from-violet-500 to-fuchsia-500', to: '/nutrition' },
+  { label: 'Settings', icon: FiSettings, variant: 'from-blue-500 to-cyan-500', to: '/settings' },
+  { label: 'Download Report', icon: FiDownload, variant: 'from-emerald-500 to-teal-500', to: '/profile' },
+  { label: 'Share Profile', icon: FiShare2, variant: 'from-cyan-500 to-blue-500', to: '/profile' },
 ];
 
 export default function QuickActions() {
@@ -22,15 +23,17 @@ export default function QuickActions() {
         {actions.map((action) => {
           const Icon = action.icon;
           return (
-            <motion.button whileHover={{ y: -3 }} key={action.label} className="group flex items-center gap-4 rounded-[1.8rem] border border-white/10 bg-slate-900/60 px-5 py-4 text-left transition hover:border-cyan-400/30 hover:bg-slate-900/80">
-              <span className={`inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-gradient-to-br ${action.variant} text-white shadow-lg`}>
-                <Icon />
-              </span>
-              <div>
-                <p className="text-sm font-semibold text-white">{action.label}</p>
-                <p className="mt-1 text-xs text-slate-400">Tap to explore</p>
-              </div>
-            </motion.button>
+            <motion.div whileHover={{ y: -3 }} key={action.label}>
+              <Link to={action.to} className="group flex items-center gap-4 rounded-[1.8rem] border border-white/10 bg-slate-900/60 px-5 py-4 text-left transition hover:border-cyan-400/30 hover:bg-slate-900/80">
+                <span className={`inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-gradient-to-br ${action.variant} text-white shadow-lg`}>
+                  <Icon />
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-white">{action.label}</p>
+                  <p className="mt-1 text-xs text-slate-400">Tap to explore</p>
+                </div>
+              </Link>
+            </motion.div>
           );
         })}
       </div>

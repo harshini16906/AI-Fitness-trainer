@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { FiBell, FiMenu, FiSearch, FiSettings, FiSun } from 'react-icons/fi';
 
 export default function TopNavbar({ onMenuToggle, darkMode, onDarkModeToggle }) {
+  const navigate = useNavigate();
+
   return (
     <header className="sticky top-0 z-20 mb-6 rounded-[2rem] border border-white/10 bg-slate-900/70 px-4 py-3 shadow-[0_0_60px_rgba(59,130,246,0.1)] backdrop-blur-xl sm:px-6">
       <div className="flex items-center justify-between gap-3">
@@ -18,7 +21,7 @@ export default function TopNavbar({ onMenuToggle, darkMode, onDarkModeToggle }) 
           <button onClick={onDarkModeToggle} className="rounded-2xl border border-white/10 bg-white/5 p-2 text-slate-300 transition hover:text-cyan-300">
             {darkMode ? <FiSun /> : <FiBell />}
           </button>
-          <button className="rounded-2xl border border-white/10 bg-white/5 p-2 text-slate-300 transition hover:text-cyan-300">
+          <button onClick={() => navigate('/settings')} className="rounded-2xl border border-white/10 bg-white/5 p-2 text-slate-300 transition hover:text-cyan-300">
             <FiSettings />
           </button>
           <div className="flex items-center gap-3 rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-3 py-2">
